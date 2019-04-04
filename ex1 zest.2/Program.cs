@@ -10,10 +10,10 @@ namespace ex1_zest._2
     {
         static void Main(string[] args)
         {
-            int[,] array = new array { { 1, 5, 8 }, { 7, 9, 4 }, { 2, 1, 0 }, { 6, 0, 3 } };
-            for (int i = 0; i<array.GetLength(0); ++i)
+            int[,] array = { { 1, 5, 8 }, { 7, 9, 4 }, { 2, 1, 0 }, { 6, 0, 3 } };
+            for (int i = 0; i < array.GetLength(0); ++i)
             {
-                for (int j = 0; j<array.GetLength(0); ++j)
+                for (int j = 0; j < array.GetLength(1); ++j)
                 {
                     Console.Write("{0} ", array[i, j]);
                 }
@@ -22,13 +22,15 @@ namespace ex1_zest._2
             Console.WriteLine();
             for (int i = 0; i<array.GetLength(0); ++i)
             {
-                int rowsum = 0;
-                for (int j = 0; j<array.GetLength(0); ++j)
+                int rowSum = 0;
+                for (int j = 0; j<array.GetLength(1); ++j)
                 {
-                    rowsum += array[i, j];
+                    rowSum += array[i, j];
                 }
-                Console.WriteLine("Sum of row {0}:   {1}", i, rowsum);
+                Console.WriteLine("Sum of row {0}:   {1}", i, rowSum);
+                Console.ReadKey();
             }
-        }Console.Readkey();
+            
+        }
     }
 }
